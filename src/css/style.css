@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+/*ESTILIZAÇÃO BASE*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  padding-bottom: 13%;
+
+  font-size: 3.7rem;
+  text-align: center;
+}
+h3 {
+  font-size: 2.3rem;
+}
+p {
+  font-size: 1.8rem;
+}
+img {
+  max-width: 100%;
+}
+
+body {
+  font-size: 1.8rem;
+}
+.section-title {
+  text-transform: uppercase;
+}
+
+/*NAV*/
+#navbar {
+  position: fixed;
+  width: 100%;
+  padding: 2%;
+  z-index: 1;
+
+  background-color: #111;
+}
+#navbar-container {
+  width: 100%;
+}
+#navbar-principal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navbar-principal input {
+  display: none;
+}
+#navbar-principal label {
+  position: absolute;
+  height: 100%;
+  padding: 5%;
+  right: 0;
+}
+#logo {
+  margin: 4% 0% 2% 0%;
+
+  color: #eee;
+}
+#sanduiche-closed {
+  object-fit: contain;
+  height: 100%;
+}
+:has(#navbar-principal input:checked) #sanduiche-closed {
+  display: none;
+}
+
+#sanduiche-open {
+  display: none;
+  object-fit: contain;
+  height: 100%;
+}
+:has(#navbar-principal input:checked) #sanduiche-open {
+  display: block;
+}
+
+:has(#navbar-principal input:checked) #navbar-items {
+  display: block;
+}
+#navbar-items {
+  display: none;
+}
+#navbar-items li {
+  padding: 3%;
+  transition: 250ms;
+
+  text-align: center;
+  list-style: none;
+  text-transform: uppercase;
+}
+#navbar-items li:hover {
+  background-color: #222222;
+}
+#navbar-items li a {
+  text-decoration: none;
+
+  color: #eee;
+}
+
+/*HEADER*/
+#banner {
+  height: 100vh;
+
+  background-image: url(../img/showcase.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #eee;
+}
+#banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 8%;
+
+  text-align: center;
+  backdrop-filter: brightness(50%);
+}
+#banner-container h2 {
+  padding-bottom: 4% !important;
+
+  line-height: 120%;
+}
+#banner-container p {
+  padding: 0% 10% 6% 10%;
+}
+#banner-container a {
+  padding: 5% 20% 5% 20%;
+  transition: 250ms;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #eee;
+  background-color: #111;
+}
+#banner-container a:hover {
+  background-color: #010101;
+}
+
+/*MAIN*/
+/*NOSSOS CLIENTES*/
+#clientes {
+  width: 100%;
+  text-align: center;
+  padding: 14%;
+
+  background-color: #ffffff;
+}
+#clientes-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  padding: 20%;
+  gap: 10% 38%;
+}
+#clientes-container > img {
+  width: 100%;
+}
+
+/*O QUE FAZEMOS*/
+#oque-fazemos {
+  padding: 6%;
+
+  background-color: #222;
+  color: #eee;
+}
+.oque-fazemos-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6%;
+  margin: 8%;
+  border-radius: 3%;
+
+  background-color: #333;
+}
+.oque-fazemos-item img {
+  max-height: 48px;
+}
+.oque-fazemos-item h3 {
+  padding-top: 8%;
+}
+.oque-fazemos-item p {
+  padding-top: 2%;
+  font-size: 1.6rem;
+}
+
+/*Nosso Produto*/
+#produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 13%;
+}
+.produto-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8%;
+
+  text-align: center;
+}
+.produto-item img {
+  max-width: 40px;
+  margin: 3%;
+}
+
+/*Avaliações*/
+#avaliacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 13%;
+
+  background-color: #222;
+  color: #eee;
+}
+
+.avaliacoes-item {
+  margin: 10% 0% 10% 0%;
+  padding: 8%;
+
+  background-color: #333;
+  border-radius: 1vw;
+}
+.avaliacoes-item img {
+  margin-bottom: 8%;
+
+  border-radius: 100vw;
+}
+.avaliacoes-item p {
+  text-align: center;
+}
+
+/*Galeria*/
+#galeria {
+  padding: 13%;
+}
+#galeria-container {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  height: 100%;
+  width: 100%;
+  gap: 30px;
+}
+#galeria-container img {
+  border-radius: 1vw;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8% 13% 8% 13%;
+
+  background-color: #222;
+  color: #eee;
+  text-align: center;
+}
