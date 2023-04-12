@@ -18,7 +18,7 @@ h1 {
   font-size: 3.2rem;
 }
 h2 {
-  padding-bottom: 4%;
+  padding-bottom: 13%;
 
   font-size: 3.7rem;
   text-align: center;
@@ -44,7 +44,7 @@ body {
 #navbar {
   position: fixed;
   width: 100%;
-  padding: 0%;
+  padding: 2%;
   z-index: 1;
 
   background-color: #111111e0;
@@ -62,7 +62,7 @@ body {
   display: none;
 }
 #navbar-principal label {
-  display: none;
+  display: block;
   position: absolute;
   height: 100%;
   padding: 5%;
@@ -71,7 +71,7 @@ body {
   cursor: pointer;
 }
 #logo {
-  margin: 2% 0% 2% 0%;
+  margin: 3% 0% 3% 0%;
 
   color: #eee;
 }
@@ -92,27 +92,28 @@ body {
   display: block;
 }
 
-:has(#navbar-principal input:checked) .navbar-items:not(#navbar-principal .navbar-items) {
-  display: block;
+:has(#navbar-principal input:checked)
+  .navbar-items:not(#navbar-principal .navbar-items) {
+  display: block !important;
 }
 .navbar-items {
-  position: absolute;
-  right: 0;
-  display: flex;
-  padding: 0 10% 0 3%;
+  position: relative;
+  right: unset;
+  display: none;
+  padding: 0 3% 0 3%;
 }
 .navbar-items:not(#navbar-principal .navbar-items) {
   display: none !important;
 }
 .navbar-items li {
-  padding: 5%;
+  padding: 3%;
   transition: 250ms;
 
   text-align: center;
   list-style: none;
   text-transform: uppercase;
 }
-.navbar-items li:not(#navbar-principal>.navbar-items li) {
+.navbar-items li:not(#navbar-principal .navbar-items li) {
   border: solid #333;
   border-width: 1px 0 0px 0;
 }
@@ -150,15 +151,15 @@ body {
   backdrop-filter: brightness(50%);
 }
 #banner-container h2 {
-  padding-bottom: 2% !important;
+  padding-bottom: 4% !important;
 
   line-height: 120%;
 }
 #banner-container p {
-  padding: 0% 10% 4% 10%;
+  padding: 0% 10% 6% 10%;
 }
 #banner-container a {
-  padding: 2% 5% 2% 5%;
+  padding: 5% 20% 5% 20%;
   transition: 250ms;
 
   text-decoration: none;
@@ -175,38 +176,38 @@ body {
 #clientes {
   width: 100%;
   text-align: center;
-  padding: 4%;
+  padding: 14%;
 
   background-color: #ffffff;
 }
 #clientes-container {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 0%;
-  gap: 5%;
+  grid-template-columns: 1fr 1fr;
+  padding: 20%;
+  gap: 10% 38%;
 }
 #clientes-container img {
-  width: 40%;
+  width: 100%;
 }
 
 /*O QUE FAZEMOS*/
 #oque-fazemos {
-  padding: 4%;
+  padding: 11%;
 
   background-color: #222;
   color: #eee;
 }
 #oque-fazemos-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 25px;
 }
 .oque-fazemos-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2%;
+  padding: 6%;
   border-radius: 3%;
 
   background-color: #333;
@@ -215,7 +216,7 @@ body {
   max-height: 48px;
 }
 .oque-fazemos-item h3 {
-  padding-top: 2%;
+  padding-top: 8%;
 }
 .oque-fazemos-item p {
   padding-top: 2%;
@@ -228,12 +229,12 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 4% 15%;
+  padding: 13%;
 }
 #produto-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 #produtos-items-container {
   display: flex;
@@ -242,14 +243,16 @@ body {
 }
 .produto-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1%;
-  gap: 20px;
+  padding: 8%;
+
+  text-align: center;
 }
 .produto-item img {
   max-width: 40px;
+  margin: 3%;
 }
 
 /*Avaliações*/
@@ -258,7 +261,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 3% 12%;
+  padding: 8% 20%;
 
   background-color: #222;
   color: #eee;
@@ -270,30 +273,28 @@ body {
 }
 .avaliacoes-item {
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  padding: 4%;
+  flex-direction: column;
+  padding: 8%;
 
   background-color: #333;
   border-radius: 1vw;
 }
 .avaliacoes-item img {
-  max-width: 200px;
-  margin-right: 4%;
+  margin-bottom: 8%;
 
   border-radius: 100vw;
 }
 .avaliacoes-item p {
-
+  text-align: center;
 }
 
 /*Galeria*/
 #galeria {
-  padding: 4%;
+  padding: 8% 13%;
 }
 #galeria-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   gap: 30px;
@@ -306,7 +307,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2%;
+  padding: 8% 13% 8% 13%;
 
   background-color: #222;
   color: #eee;

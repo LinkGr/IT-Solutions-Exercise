@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IT Solutions</title>
 
+    <link rel="stylesheet" href="./src/css/style.css">
     <link
       rel="stylesheet"
       media="screen and (max-width: 480px)"
-      href="./src/css/style.css"
+      href="./src/css/mobile.css"
     />
   </head>
   <body>
@@ -27,8 +28,13 @@
             />
             <img src="./src/img/cruz.svg" alt="" id="sanduiche-open" />
           </label>
+          <ul class="navbar-items">
+            <li><a href="#banner">Início</a></li>
+            <li><a href="#clientes">Sobre</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+          </ul>
         </div>
-        <ul id="navbar-items">
+        <ul class="navbar-items">
           <li><a href="#banner">Início</a></li>
           <li><a href="#clientes">Sobre</a></li>
           <li><a href="#galeria">Galeria</a></li>
@@ -53,10 +59,10 @@
       <section id="clientes">
         <h2 id="section-title">Nossos clientes</h2>
         <div id="clientes-container">
-          <img src="./src/img/netflix.png" alt="Netflix" />
-          <img src="./src/img/google.png" alt="Google" />
-          <img src="./src/img/apple.png" alt="Apple" />
-          <img src="./src/img/microsoft.png" alt="Microsoft" />
+          <div><img src="./src/img/netflix.png" alt="Netflix" /></div>
+          <div><img src="./src/img/google.png" alt="Google" /></div>
+          <div><img src="./src/img/apple.png" alt="Apple" /></div>
+          <div><img src="./src/img/microsoft.png" alt="Microsoft" /></div>
         </div>
       </section>
 
@@ -160,7 +166,7 @@
 
     <footer>
       <span
-        >Copyright 2020 - Todos os direitos reservados.
+        >Copyright 2020 - Todos os direitos reservados.<br>
 
         Feito por IT Solutions.</span
       >
