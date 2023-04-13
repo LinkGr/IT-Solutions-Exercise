@@ -15,7 +15,7 @@ html {
 }
 
 h1 {
-  font-size: 3.4rem;
+  font-size: 2.7rem;
 }
 h2 {
   padding-bottom: 4%;
@@ -42,68 +42,69 @@ body {
 
 /*NAV*/
 #navbar {
-  position: fixed;
-  width: 100%;
-  padding: 0%;
-  z-index: 1;
-
-  background-color: #111111e0;
-}
-#navbar-container {
-  width: 100%;
-}
-#navbar-principal {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#navbar-principal input {
-  display: none;
-}
-#navbar-principal label {
-  display: none;
-  position: absolute;
-  height: 100%;
-  padding: 5%;
-  right: 0;
-
-  cursor: pointer;
-}
-#logo {
-  margin: 2% 0% 2% 0%;
-
-  color: #eee;
-}
-#sanduiche-closed {
-  object-fit: contain;
-  height: 100%;
-}
-:has(#navbar-principal input:checked) #sanduiche-closed {
-  display: none;
-}
-
-#sanduiche-open {
-  display: none;
-  object-fit: contain;
-  height: 100%;
-}
-:has(#navbar-principal input:checked) #sanduiche-open {
-  display: block;
-}
-
-:has(#navbar-principal input:checked) .navbar-items:not(#navbar-principal .navbar-items) {
-  display: block;
-}
-.navbar-items {
-  position: absolute;
-  right: 0;
-  display: flex;
-  padding: 0 10% 0 3%;
-}
-.navbar-items:not(#navbar-principal .navbar-items) {
-  display: none !important;
-}
+   position: fixed;
+   width: 100%;
+   padding: 1%;
+   z-index: 1;
+ 
+   background-color: #111111e0;
+ }
+ #navbar-container {
+   width: 100%;
+ }
+ #navbar-principal {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ #navbar-principal input {
+   display: none;
+ }
+ #navbar-principal label {
+   display: block;
+   position: absolute;
+   height: 100%;
+   padding: 2.5%;
+   right: 0;
+ 
+   cursor: pointer;
+ }
+ #logo {
+   margin: 2% 0% 2% 0%;
+ 
+   color: #eee;
+ }
+ #sanduiche-closed {
+   object-fit: contain;
+   height: 100%;
+ }
+ :has(#navbar-principal input:checked) #sanduiche-closed {
+   display: none;
+ }
+ 
+ #sanduiche-open {
+   display: none;
+   object-fit: contain;
+   height: 100%;
+ }
+ :has(#navbar-principal input:checked) #sanduiche-open {
+   display: block;
+ }
+ 
+ :has(#navbar-principal input:checked)
+   .navbar-items:not(#navbar-principal .navbar-items) {
+   display: block !important;
+ }
+ .navbar-items {
+   position: relative;
+   right: unset;
+   display: none;
+   padding: 0 3% 0 3%;
+ }
+ .navbar-items:not(#navbar-principal .navbar-items) {
+   display: none !important;
+ }
 .navbar-items li {
   padding: 5%;
   transition: 250ms;
@@ -119,7 +120,6 @@ body {
 .navbar-items li:hover {
   background-color: #222222c1;
 }
-
 .navbar-items li a {
   display: block;
   width: 100%;
@@ -201,8 +201,9 @@ body {
   color: #eee;
 }
 #oque-fazemos-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto auto;
+  
   gap: 25px;
 }
 .oque-fazemos-item {
@@ -235,11 +236,13 @@ body {
 }
 #produto-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 #produtos-items-container {
   display: flex;
+  padding-top: 2%;
   flex-direction: column;
   gap: 20px;
 }
@@ -295,7 +298,7 @@ body {
 }
 #galeria-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   height: 100%;
   width: 100%;
   gap: 30px;

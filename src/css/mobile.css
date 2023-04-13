@@ -15,26 +15,26 @@ html {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
 }
 h2 {
   padding-bottom: 13%;
 
-  font-size: 3.7rem;
+  font-size: 2.8rem;
   text-align: center;
 }
 h3 {
-  font-size: 2.3rem;
+  font-size: 1.9rem;
 }
 p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 img {
   max-width: 100%;
 }
 
 body {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 .section-title {
   text-transform: uppercase;
@@ -65,7 +65,7 @@ body {
   display: block;
   position: absolute;
   height: 100%;
-  padding: 5%;
+  padding: 3.2%;
   right: 0;
 
   cursor: pointer;
@@ -176,7 +176,7 @@ body {
 #clientes {
   width: 100%;
   text-align: center;
-  padding: 14%;
+  padding: 10%;
 
   background-color: #ffffff;
 }
@@ -184,7 +184,7 @@ body {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  padding: 20%;
+  padding: 10%;
   gap: 10% 38%;
 }
 #clientes-container img {
@@ -216,11 +216,10 @@ body {
   max-height: 48px;
 }
 .oque-fazemos-item h3 {
-  padding-top: 8%;
+  padding-top: 2%;
 }
 .oque-fazemos-item p {
-  padding-top: 2%;
-  font-size: 1.6rem;
+  padding-top: 5%;
 }
 
 /*Nosso Produto*/
@@ -254,6 +253,9 @@ body {
   max-width: 40px;
   margin: 3%;
 }
+.produto-item p {
+  font-size: 1.6rem;
+}
 
 /*Avaliações*/
 #avaliacoes {
@@ -275,13 +277,15 @@ body {
   display: flex;
   flex-direction: column;
   padding: 8%;
+  width: 100%;
 
   background-color: #333;
   border-radius: 1vw;
 }
 .avaliacoes-item img {
   margin-bottom: 8%;
-
+  max-width: 100%;
+  
   border-radius: 100vw;
 }
 .avaliacoes-item p {
