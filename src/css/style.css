@@ -13,8 +13,8 @@ html {
 
   scroll-behavior: smooth;
 }
-:target {
-  scroll-margin-top: 79px;
+html :target {
+  scroll-margin-top: 80px;
 }
 
 h1 {

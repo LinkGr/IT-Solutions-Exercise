@@ -33,7 +33,7 @@ img {
   max-width: 100%;
 }
 
-:target {
+html :target {
   scroll-margin-top: 75px;
 }
 
