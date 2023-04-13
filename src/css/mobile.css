@@ -33,6 +33,10 @@ img {
   max-width: 100%;
 }
 
+:target {
+  scroll-margin-top: 70px;
+}
+
 body {
   font-size: 1.5rem;
 }
